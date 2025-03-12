@@ -1,0 +1,82 @@
+/* src/App.css or src/styles/global.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-text font-sans transition-all duration-default ease-default;
+  }
+
+  /* Typography */
+  h1 {
+    @apply text-heading-lg font-bold;
+  }
+  
+  h2 {
+    @apply text-heading-md font-semibold;
+  }
+  
+  h3 {
+    @apply text-heading-sm font-semibold;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  .card {
+    @apply bg-background-card border border-border rounded-lg p-4 shadow-sm;
+  }
+
+  .button {
+    @apply bg-primary text-white px-4 py-2 rounded-md transition-all duration-default
+           hover:bg-primary-light focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+  }
+
+  .link {
+    @apply text-primary hover:opacity-80 transition-all duration-default;
+  }
+}
+
+/* Root Variables */
+:root {
+  /* Base Colors */
+  --primary: #2563eb;
+  --primary-light: #3b82f6;
+  --secondary: #a529f5;
+  --accent: #f59e0b;
+  --default: #0f172a;
+
+  /* Light Theme */
+  --body-background: #f8fafc;
+  --card-background: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --border-color: #e2e8f0;
+  --hover-color: #f1f5f9;
+
+  /* Typography */
+  --heading-large: 2rem;
+  --heading-medium: 1.5rem;
+  --heading-small: 1.25rem;
+  --text-base: 1rem;
+
+  /* Effects */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --transition: all 0.2s ease-in-out;
+}
+
+/* Dark Mode */
+.dark {
+  --body-background: #0f172a;
+  --card-background: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --border-color: #334155;
+  --hover-color: #1e293b;
+
+  --primary: #3b82f6;
+  --primary-light: #60a5fa;
+}

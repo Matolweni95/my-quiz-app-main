@@ -1,0 +1,49 @@
+/* theme-toggle.css */
+@keyframes toggle-switch {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(20px); }
+  }
+  
+  .theme-toggle {
+	position: relative;
+	width: 48px;
+	height: 24px;
+  }
+  
+  .theme-toggle input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  .theme-toggle span {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--text-secondary);
+	transition: var(--transition);
+	border-radius: 34px;
+  }
+  
+  .theme-toggle span:before {
+	position: absolute;
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	transition: var(--transition);
+	border-radius: 50%;
+  }
+  
+  .theme-toggle input:checked + span {
+	background-color: var(--primary);
+  }
+  
+  .theme-toggle input:checked + span:before {
+	transform: translateX(24px);
+  }
